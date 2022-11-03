@@ -6,6 +6,7 @@ import Header from './components/head';
 import Home from './components/home';
 import Footer from './components/footer';
 import Categories from './components/categories';
+import CategoryProducts from './components/categoryProduct';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Switch>
            <Route path='/' element={<Home/>}/>
            <Route path='/categories' element={<Categories/>}/>
+           <Route path='/category/:category_slug/:category_id' element={<CategoryProducts/>}/>
       </Switch>
       <Footer/>
       
