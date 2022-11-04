@@ -8,7 +8,7 @@ function Header(){
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-                        <Link className="navbar-brand" to="/">PopUp Square</Link>
+                        <Link className="navbar-brand" to="/">Popup Square</Link>
                         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item">
                             <Link className="nav-link" aria-current="page" to="/">Home</Link>

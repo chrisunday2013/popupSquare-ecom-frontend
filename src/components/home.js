@@ -1,135 +1,24 @@
 import logo from '../logo.svg';
 import { Link } from 'react-router-dom';
+import AllProductS from './allProducts';
+import SingleProduct from './SingleProduct';
 
 function Home(){
     return(
        <>
-       
-      <main className="mt-3">
+       <main className="mt-3">
         <div className="container">
           {/* {latest product section} */}
-          <h3 className="mb-4">Latest Products <a className="float-end btn btn-dark">View All Products <i className="fa-solid fa-arrow-right-long"></i></a> </h3> 
+          <h3 className="mb-4">Latest Products <Link to="/products" className="float-end btn btn-dark">View All Products <i className="fa-solid fa-arrow-right-long"></i></Link> </h3> 
         <div className="row mb-4 ">
-          {/* {Product Box} */}
-            <div className="col-md-3 mb-3">
-                <div className="card shadow">
-                    <img src={logo} className="card-img-top" alt="..."/>
-                    <div className="card-body">
-                      <h5 className="card-title">Product title</h5>
-                      <h5 className="card-title text-muted">Price: #. 500</h5>
-                    </div>
-                    <div className="card-footer">
-                        <button title="Add to Cart" className="btn btn-success btn-sm"><i className="fa-solid fa-cart-plus"></i></button>
-                        <button title="Add to Wishlist" className="btn btn-danger ms-1 btn-sm"><i className="fa fa-heart"></i></button>
-                    </div>
-                </div>
-            </div>
-          {/* {Product Box End} */}
-           {/* {Product Box} */}
-           <div className="col-md-3 mb-3">
-                <div className="card shadow">
-                    <img src={logo} className="card-img-top" alt="..."/>
-                    <div className="card-body">
-                      <h5 className="card-title">Product title</h5>
-                      <h5 className="card-title text-muted">Price: #. 500</h5>
-                    </div>
-                    <div className="card-footer">
-                        <button title="Add to Cart" className="btn btn-success btn-sm"><i className="fa-solid fa-cart-plus"></i></button>
-                        <button title="Add to Wishlist" className="btn btn-danger ms-1 btn-sm"><i className="fa fa-heart"></i></button>
-                    </div>
-                </div>
-            </div>
-          {/* {Product Box End} */}
-           {/* {Product Box} */}
-           <div className="col-md-3 mb-3">
-                <div className="card shadow">
-                    <img src={logo} className="card-img-top" alt="..."/>
-                    <div className="card-body">
-                      <h5 className="card-title">Product title</h5>
-                      <h5 className="card-title text-muted">Price: #. 500</h5>
-                    </div>
-                    <div className="card-footer">
-                        <button title="Add to Cart" className="btn btn-success btn-sm"><i className="fa-solid fa-cart-plus"></i></button>
-                        <button title="Add to Wishlist" className="btn btn-danger ms-1 btn-sm"><i className="fa fa-heart"></i></button>
-                    </div>
-                </div>
-            </div>
-          {/* {Product Box End} */}
-           {/* {Product Box} */}
-           <div className="col-md-3 mb-3">
-                <div className="card shadow">
-                    <img src={logo} className="card-img-top" alt="..."/>
-                    <div className="card-body">
-                      <h5 className="card-title">Product title</h5>
-                      <h5 className="card-title text-muted">Price: #. 500</h5>
-                    </div>
-                    <div className="card-footer">
-                        <button title="Add to Cart" className="btn btn-success btn-sm"><i className="fa-solid fa-cart-plus"></i></button>
-                        <button title="Add to Wishlist" className="btn btn-danger ms-1 btn-sm"><i className="fa fa-heart"></i></button>
-                    </div>
-                </div>
-            </div>
-          {/* {Product Box End} */}
-           {/* {Product Box} */}
-           <div className="col-md-3 mb-3">
-                <div className="card shadow">
-                    <img src={logo} className="card-img-top" alt="..."/>
-                    <div className="card-body">
-                      <h5 className="card-title">Product title</h5>
-                      <h5 className="card-title text-muted">Price: #. 500</h5>
-                    </div>
-                    <div className="card-footer">
-                        <button title="Add to Cart" className="btn btn-success btn-sm"><i className="fa-solid fa-cart-plus"></i></button>
-                        <button title="Add to Wishlist" className="btn btn-danger ms-1 btn-sm"><i className="fa fa-heart"></i></button>
-                    </div>
-                </div>
-            </div>
-          {/* {Product Box End} */}
-           {/* {Product Box} */}
-           <div className="col-md-3 mb-3">
-                <div className="card shadow">
-                    <img src={logo} className="card-img-top" alt="..."/>
-                    <div className="card-body">
-                      <h5 className="card-title">Product title</h5>
-                      <h5 className="card-title text-muted">Price: #. 500</h5>
-                    </div>
-                    <div className="card-footer">
-                        <button title="Add to Cart" className="btn btn-success btn-sm"><i className="fa-solid fa-cart-plus"></i></button>
-                        <button title="Add to Wishlist" className="btn btn-danger ms-1 btn-sm"><i className="fa fa-heart"></i></button>
-                    </div>
-                </div>
-            </div>
-          {/* {Product Box End} */}
-           {/* {Product Box} */}
-           <div className="col-md-3 mb-3">
-                <div className="card shadow">
-                    <img src={logo} className="card-img-top" alt="..."/>
-                    <div className="card-body">
-                      <h5 className="card-title">Product title</h5>
-                      <h5 className="card-title text-muted">Price: #. 500</h5>
-                    </div>
-                    <div className="card-footer">
-                        <button title="Add to Cart" className="btn btn-success btn-sm"><i className="fa-solid fa-cart-plus"></i></button>
-                        <button title="Add to Wishlist" className="btn btn-danger ms-1 btn-sm"><i className="fa fa-heart"></i></button>
-                    </div>
-                </div>
-            </div>
-          {/* {Product Box End} */}
-           {/* {Product Box} */}
-           <div className="col-md-3 mb-3">
-                <div className="card shadow">
-                    <img src={logo} className="card-img-top" alt="..."/>
-                    <div className="card-body">
-                      <h5 className="card-title">Product title</h5>
-                      <h5 className="card-title text-muted">Price: #. 500</h5>
-                    </div>
-                    <div className="card-footer">
-                        <button title="Add to Cart" className="btn btn-success btn-sm"><i className="fa-solid fa-cart-plus"></i></button>
-                        <button title="Add to Wishlist" className="btn btn-danger ms-1 btn-sm"><i className="fa fa-heart"></i></button>
-                    </div>
-                </div>
-            </div>
-          {/* {Product Box End} */}
+            <SingleProduct title="food items"/>
+            <SingleProduct title="food items"/>
+            <SingleProduct title="food items"/>
+            <SingleProduct title="food items"/>
+            <SingleProduct title="food items"/>
+            <SingleProduct title="food items"/>
+            <SingleProduct title="food items"/>
+            <SingleProduct title="food items"/>
        
         </div>
         {/* {end latest product section} */}
