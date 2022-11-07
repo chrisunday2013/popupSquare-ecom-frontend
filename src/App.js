@@ -11,6 +11,12 @@ import AllProductS from './components/allProducts';
 import ProductDetail from './components/productDetail';
 import Checkout from './components/checkout';
 
+
+// customer info
+import Register from './components/customer/register';
+import Login from './components/customer/login';
+
+
 function App() {
   return (
     <>
@@ -22,6 +28,9 @@ function App() {
            <Route path='/product/:product_slug/:product_id' element={<ProductDetail/>}/>
            <Route path='/products' element={<AllProductS/>}/>
            <Route path='/checkout' element={<Checkout/>}/>
+           {/* customer */}
+           <Route path='/customer-register' element={<Register/>}/>
+           <Route path='/customer-login' element={<Login/>}/>
       </Switch>
       <Footer/>
       
