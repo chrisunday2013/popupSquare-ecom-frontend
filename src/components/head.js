@@ -24,8 +24,8 @@ function Header(){
                                 <li><Link className="dropdown-item" to="/customer-register">Register</Link></li>
                                 <li><Link className="dropdown-item" to="/customer-login">Login</Link></li>
                                 <li><hr className="dropdown-divider"/></li>
-                                <li><Link className="dropdown-item" to="/dashboard">Dashboard</Link></li>
-                                <li><Link className="dropdown-item" to="/logout">Logout</Link></li>
+                                <li><Link className="dropdown-item" to="/customer-dashboard">Dashboard</Link></li>
+                                <li><Link className="dropdown-item" to="/customer-login">Logout</Link></li>
                             </ul>
                             </li>
                         <li className="nav-item">

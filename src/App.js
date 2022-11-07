@@ -15,6 +15,7 @@ import Checkout from './components/checkout';
 // customer info
 import Register from './components/customer/register';
 import Login from './components/customer/login';
+import Dashboard from './components/customer/dashboard';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
            {/* customer */}
            <Route path='/customer-register' element={<Register/>}/>
            <Route path='/customer-login' element={<Login/>}/>
+           <Route path='/customer-dashboard' element={<Dashboard/>}/>
       </Switch>
       <Footer/>
       
