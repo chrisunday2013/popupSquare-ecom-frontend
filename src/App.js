@@ -16,6 +16,9 @@ import Checkout from './components/checkout';
 import Register from './components/customer/register';
 import Login from './components/customer/login';
 import Dashboard from './components/customer/dashboard';
+import Orders from './components/customer/order';
+import OrderSuccess from './components/customer/orderSuccess';
+import OrderFailed from './components/customer/orderfailed';
 
 
 function App() {
@@ -33,6 +36,9 @@ function App() {
            <Route path='/customer-register' element={<Register/>}/>
            <Route path='/customer-login' element={<Login/>}/>
            <Route path='/customer-dashboard' element={<Dashboard/>}/>
+           <Route path='/order' element={<Orders/>}/>
+           <Route path='/order-success' element={<OrderSuccess/>}/>
+           <Route path='/order-failed' element={<OrderFailed/>}/>
       </Switch>
       <Footer/>
       
