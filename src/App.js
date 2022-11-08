@@ -19,6 +19,9 @@ import Dashboard from './components/customer/dashboard';
 import Orders from './components/customer/order';
 import OrderSuccess from './components/customer/orderSuccess';
 import OrderFailed from './components/customer/orderfailed';
+import Wishlist from './components/customer/wishlist';
+import Profile from './components/customer/profile';
+import ChangePassword from './components/customer/changePwd';
 
 
 function App() {
@@ -39,6 +42,10 @@ function App() {
            <Route path='/order' element={<Orders/>}/>
            <Route path='/order-success' element={<OrderSuccess/>}/>
            <Route path='/order-failed' element={<OrderFailed/>}/>
+           <Route path='/wishlist' element={<Wishlist/>}/>
+           <Route path='/customer-profile' element={<Profile/>}/>
+           <Route path='/customer-changePassword' element={<ChangePassword/>}/>
+
       </Switch>
       <Footer/>
       
