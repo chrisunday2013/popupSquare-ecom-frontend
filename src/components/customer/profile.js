@@ -33,9 +33,10 @@ function Profile(){
                                     <input type="email" className="form-control" id="email"/>
                             </div>
                             <div className="mb-3">
-                                    <label for="video" className="form-label">Profile Image</label>
-                                    <input type="file" name="profile_img"/>
-                                    <p className="mt-2"><img src="" width="350" alt=""/></p>
+                                <div className="mb-3">
+                                    <label for="profileImg" className="form-label">Profile Image</label>
+                                    <input type="file" className="form-control" id="profileImg"/>
+                                </div>
                             </div>
                             <button  className="btn btn-primary">Update</button>
 

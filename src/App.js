@@ -22,7 +22,8 @@ import OrderFailed from './components/customer/orderfailed';
 import Wishlist from './components/customer/wishlist';
 import Profile from './components/customer/profile';
 import ChangePassword from './components/customer/changePwd';
-
+import AddressList from './components/customer/addessList';
+import AddAddress from './components/customer/addAddress';
 
 function App() {
   return (
@@ -45,6 +46,8 @@ function App() {
            <Route path='/wishlist' element={<Wishlist/>}/>
            <Route path='/customer-profile' element={<Profile/>}/>
            <Route path='/customer-changePassword' element={<ChangePassword/>}/>
+           <Route path='/customer-addressList' element={<AddressList/>}/>
+           <Route path='/customer-addAddress' element={<AddAddress/>}/>
 
       </Switch>
       <Footer/>
