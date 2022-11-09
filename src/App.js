@@ -25,6 +25,13 @@ import ChangePassword from './components/customer/changePwd';
 import AddressList from './components/customer/addessList';
 import AddAddress from './components/customer/addAddress';
 
+
+// seller info
+import SellerRegister from './components/seller/register';
+import SellerLogin from './components/seller/login';
+import SellerDashboard from './components/seller/sellerDashboard';
+
+
 function App() {
   return (
     <>
@@ -48,6 +55,11 @@ function App() {
            <Route path='/customer-changePassword' element={<ChangePassword/>}/>
            <Route path='/customer-addressList' element={<AddressList/>}/>
            <Route path='/customer-addAddress' element={<AddAddress/>}/>
+           {/* {seller} */}
+           <Route path='/seller-register' element={<SellerRegister/>}/>
+           <Route path='/seller-login' element={<SellerLogin/>}/>
+           <Route path='/seller-dashboard' element={<SellerDashboard/>}/>
+
 
       </Switch>
       <Footer/>
