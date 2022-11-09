@@ -30,6 +30,8 @@ import AddAddress from './components/customer/addAddress';
 import SellerRegister from './components/seller/register';
 import SellerLogin from './components/seller/login';
 import SellerDashboard from './components/seller/sellerDashboard';
+import SellerProducts from './components/seller/sellerProducts';
+import AddProducts from './components/seller/addProduct';
 
 
 function App() {
@@ -37,29 +39,30 @@ function App() {
     <>
       <Header/>
       <Switch>
-           <Route path='/' element={<Home/>}/>
-           <Route path='/categories' element={<Categories/>}/>
-           <Route path='/category/:category_slug/:category_id' element={<CategoryProducts/>}/>
-           <Route path='/product/:product_slug/:product_id' element={<ProductDetail/>}/>
-           <Route path='/products' element={<AllProductS/>}/>
-           <Route path='/checkout' element={<Checkout/>}/>
-           {/* customer */}
-           <Route path='/customer-register' element={<Register/>}/>
-           <Route path='/customer-login' element={<Login/>}/>
-           <Route path='/customer-dashboard' element={<Dashboard/>}/>
-           <Route path='/order' element={<Orders/>}/>
-           <Route path='/order-success' element={<OrderSuccess/>}/>
-           <Route path='/order-failed' element={<OrderFailed/>}/>
-           <Route path='/wishlist' element={<Wishlist/>}/>
-           <Route path='/customer-profile' element={<Profile/>}/>
-           <Route path='/customer-changePassword' element={<ChangePassword/>}/>
-           <Route path='/customer-addressList' element={<AddressList/>}/>
-           <Route path='/customer-addAddress' element={<AddAddress/>}/>
-           {/* {seller} */}
-           <Route path='/seller-register' element={<SellerRegister/>}/>
-           <Route path='/seller-login' element={<SellerLogin/>}/>
-           <Route path='/seller-dashboard' element={<SellerDashboard/>}/>
-
+            <Route path='/' element={<Home/>}/>
+            <Route path='/categories' element={<Categories/>}/>
+            <Route path='/category/:category_slug/:category_id' element={<CategoryProducts/>}/>
+            <Route path='/product/:product_slug/:product_id' element={<ProductDetail/>}/>
+            <Route path='/products' element={<AllProductS/>}/>
+            <Route path='/checkout' element={<Checkout/>}/>
+            {/* customer */}
+            <Route path='/customer-register' element={<Register/>}/>
+            <Route path='/customer-login' element={<Login/>}/>
+            <Route path='/customer-dashboard' element={<Dashboard/>}/>
+            <Route path='/order' element={<Orders/>}/>
+            <Route path='/order-success' element={<OrderSuccess/>}/>
+            <Route path='/order-failed' element={<OrderFailed/>}/>
+            <Route path='/wishlist' element={<Wishlist/>}/>
+            <Route path='/customer-profile' element={<Profile/>}/>
+            <Route path='/customer-changePassword' element={<ChangePassword/>}/>
+            <Route path='/customer-addressList' element={<AddressList/>}/>
+            <Route path='/customer-addAddress' element={<AddAddress/>}/>
+            {/* {seller} */}
+            <Route path='/seller-register' element={<SellerRegister/>}/>
+            <Route path='/seller-login' element={<SellerLogin/>}/>
+            <Route path='/seller-dashboard' element={<SellerDashboard/>}/>
+            <Route path='/seller-products' element={<SellerProducts/>}/>
+            <Route path='/add-products' element={<AddProducts/>}/>
 
       </Switch>
       <Footer/>
