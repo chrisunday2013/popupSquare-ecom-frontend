@@ -34,6 +34,9 @@ import SellerProducts from './components/seller/sellerProducts';
 import AddProducts from './components/seller/addProduct';
 import SellerOrders from './components/seller/sellerOrders';
 import Customers from './components/seller/customer';
+import Report from './components/seller/report';
+import SellerChangePwd from './components/seller/changePassword';
+import SellerProfile from './components/seller/profile';
 
 
 function App() {
@@ -67,6 +70,9 @@ function App() {
             <Route path='/add-products' element={<AddProducts/>}/>
             <Route path='/seller-orders' element={<SellerOrders/>}/>
             <Route path='/customers' element={<Customers/>}/>
+            <Route path='/reports' element={<Report/>}/>
+            <Route path='/seller-profile' element={<SellerProfile/>}/>
+            <Route path='/seller-changePwd' element={<SellerChangePwd/>}/>
 
       </Switch>
       <Footer/>

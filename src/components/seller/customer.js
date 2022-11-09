@@ -30,7 +30,8 @@ function Customers(props){
                                                             <td>johnwick@gmail.com</td>
                                                             <td>09098787654</td>
                                                             <td>
-                                                                <button className="btn btn-danger btn-sm">Remove from List</button>
+                                                                <button className="btn btn-primary btn-sm ">Orders</button>
+                                                                <button className="btn btn-danger btn-sm ms-1">Remove from List</button>
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -39,7 +40,8 @@ function Customers(props){
                                                             <td>johnBoyega@gmail.com</td>
                                                             <td>09098781154</td>
                                                             <td>
-                                                                <button className="btn btn-danger btn-sm">Remove from List</button>
+                                                                <button className="btn btn-primary btn-sm ">Orders</button>
+                                                                <button className="btn btn-danger btn-sm ms-1">Remove from List</button>
                                                             </td>
                                                         </tr>
                                                               
