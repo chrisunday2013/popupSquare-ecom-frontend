@@ -2,8 +2,26 @@ import logo from '../logo.svg';
 import { Link } from 'react-router-dom';
 import AllProductS from './allProducts';
 import SingleProduct from './SingleProduct';
+import { useState, useEffect } from 'react';
 
-function Home(){
+    function Home(){
+        
+            
+       
+    const [products, setProducts] = useState([])
+    
+
+    useEffect(()=> {
+        fetchData('http://127.0.0.1:8000/api/products/');
+    },[])
+
+    function fetchData(baseurl){
+        fetch(baseurl)
+       .then((response) => response.json())
+       .then((data) => setProducts(data.results));
+    }
+
+
     return(
        <>
        <main className="mt-3">
@@ -11,16 +29,10 @@ function Home(){
           {/* {latest product section} */}
           <h3 className="mb-4">Latest Products <Link to="/products" className="float-end btn btn-dark">View All Products <i className="fa-solid fa-arrow-right-long"></i></Link> </h3> 
         <div className="row mb-4 ">
-            <SingleProduct title="food items"/>
-            <SingleProduct title="food items"/>
-            <SingleProduct title="food items"/>
-            <SingleProduct title="food items"/>
-            <SingleProduct title="food items"/>
-            <SingleProduct title="food items"/>
-            <SingleProduct title="food items"/>
-            <SingleProduct title="food items"/>
-       
-        </div>
+            {products.map((product, index) =>
+               <SingleProduct product={product}/>
+            )}
+       </div>
         {/* {end latest product section} */}
 
          {/* {Popular category section} */}
