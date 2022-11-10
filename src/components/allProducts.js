@@ -1,23 +1,51 @@
 import logo from '../logo.svg';
 import SingleProduct from './SingleProduct';
 import { useState, useEffect } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
+// const baseurl='http://127.0.0.1:8000/api/products/'
 
 function AllProductS(){
-    
-    const [products, setProducts] = useState([])
+    const baseUrl = 'http://127.0.0.1:8000/api';
+    const [products, setProducts] = useState([]);
+    const [totalResult, setTotalResults] = useState(0)
     
 
+
+    // useEffect(()=>{
+    //     try{
+    //         axios.get(baseurl)
+    //         .then((res)=>{
+    //             setProducts(res.data.results)
+    //         })
+    //     }catch(error){
+    //         console.log(error)
+    //     }
+    // },[]);
+
+
     useEffect(()=> {
-        fetchData('http://127.0.0.1:8000/api/products/');
-    })
+        fetchData(baseUrl+'/products');
+    },[]);
 
     function fetchData(baseurl){
         fetch(baseurl)
        .then((response) => response.json())
-       .then((data) => setProducts(data.results));
+       .then((data) => {
+                  setProducts(data.results)
+                  setTotalResults(data.count);
+        });
+    }
+
+    function changeUrl(baseurl){
+        fetchData(baseurl);
     }
     
+    var links=[];
+    for(let i=1; i<=totalResult; i++){
+        links.push(<li className="page-item"><Link onClick={()=>changeUrl(baseUrl+`/products/?page=${i}`)} to={`/products/?page=${i}`} className="page-link">{i}</Link></li>)
+    }
     
     return(
          <div className="container mt-4">
@@ -31,19 +59,7 @@ function AllProductS(){
              {/* {pagination start} */}
              <nav aria-label="Page navigation example">
                     <ul class="pagination">
-                        <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                        </li>
+                        {links}
                     </ul>
                 </nav>
              {/* {end pagination} */}
