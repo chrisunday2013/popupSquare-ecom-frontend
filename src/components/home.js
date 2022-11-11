@@ -29,8 +29,7 @@ import { useState, useEffect } from 'react';
           {/* {latest product section} */}
           <h3 className="mb-4">Latest Products <Link to="/products" className="float-end btn btn-dark">View All Products <i className="fa-solid fa-arrow-right-long"></i></Link> </h3> 
         <div className="row mb-4 ">
-            {products.map((product, index) =>
-               <SingleProduct product={product}/>
+            {products.map((product, index) => <SingleProduct product={product} />
             )}
        </div>
         {/* {end latest product section} */}

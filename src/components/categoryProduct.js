@@ -1,18 +1,14 @@
 import logo from '../logo.svg';
 import SingleProduct from './SingleProduct';
 
+
 function CategoryProducts(){
+
+   
     return(
          <div className="container mt-4">
            <h3 className="mb-4"><span className="text-success">Electronics </span>Product</h3> 
            <div className="row mb-4 ">
-                <SingleProduct title="Electronics "/>
-                <SingleProduct title="Utentils "/>
-                <SingleProduct title="Shoes"/>
-                <SingleProduct title="Bags"/>
-                <SingleProduct title="Cars "/>
-                <SingleProduct title="Toys"/>
-                <SingleProduct title="Clothes"/>
                 <SingleProduct title="Food Products"/>
            </div>
            
